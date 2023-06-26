@@ -34,16 +34,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-<<<<<<< HEAD
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule
-    
-=======
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
->>>>>>> 7e12d5c679816d2794a7e726780a3026c3c3cd5c
   ],
   providers: [],
   bootstrap: [AppComponent]
