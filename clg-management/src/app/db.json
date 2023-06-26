@@ -1,0 +1,32 @@
+{
+  "fees": [
+    {
+      "id": 1,
+      "studentname": "akshata",
+      "studentid": "21",
+      "course": "pcmb",
+      "totalfees": 85000,
+      "feespaid": 50000,
+      "pendingfees": 35000
+    },
+    {
+      "id": 2,
+      "studentname": "arun",
+      "studentid": "23",
+      "course": "pcmcs",
+      "totalfees": 80000,
+      "feespaid": 20000,
+      "pendingfees": 60000
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
