@@ -17,7 +17,8 @@ const routes: Routes = [
   {path:'attendence',component:AttendenceComponent},
   {path:'faculty',component:FacultyDetailsComponent},
   {path:'timetable',component:TimeTableComponent},
-  {path:'feedback',component:FeedbackComponent}
+  {path:'feedback',component:FeedbackComponent},
+
 
 ];
 

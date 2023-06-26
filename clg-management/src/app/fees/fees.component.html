@@ -1,1 +1,94 @@
-<p>fees works!</p>
+<div class="m">
+  <nav>
+  <h2> <i class="bi bi-arrow-left-circle-fill" routerLink="/home"></i>
+   <!-- <div class="d-flex"> -->
+  <button type="button" (click)="onclickpostbabyDetails()" class="btn ms-2 me-2 mb-2 mt-2 ps-2"
+    style="background-color:rgb(38, 36, 38) ; width:80px;color: white;" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    Add fees Details
+  </button>
+</h2>
+<!-- </div> -->
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(127, 68, 155); ;">
+        <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: white;">Fees Details</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="listValue">
+          <div class="mb-3">
+            <label for="studentname" class="form-label">Student Name:</label>
+            <input type="text" class="form-control" formControlName="studentname" id="studentname" name="studentname" required>
+          </div>
+          <div class="mb-3">
+            <label for="id">Student ID:</label>
+            <input type="text" id="istudentidd" name="studentid" required formControlName="studentid">
+          </div>
+          <div class="mb-3">
+            <label for="branch">Course</label>
+            <div class="radio-group">
+              <input type="radio" id="course"  name="course" formControlName="course" value="pcmb">
+              <label for="pcmb">PCMB</label>
+              <input type="radio" id="course"  name="course" formControlName="course" value="pcmcs">
+             <label for="pcmcs">PCMCS</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="fees">Total Fees :</label>
+            <input type="number" id="fees" name="totalfees" required formControlName="totalfees">
+          </div>
+          <div class="mb-3">
+            <label for="fees">Fees Paid:</label>
+            <input type="number" id="feespaid" name="feespaid" required formControlName="feespaid">
+          </div>
+          <div class="mb-3">
+            <label for="fees">Pending Ammount:</label>
+            <input type="number" id="pendingfees" name="pendingfees" required formControlName="pendingfees">
+          </div>
+          
+        </form>
+
+      </div>
+  
+        <button type="button" *ngIf="showadd" (click)="postlist(this.listValue.value)" class="btn btn-success">Save</button>
+         <button type="button" *ngIf="showupdate" (click)="updatelist()" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+
+
+  <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">student name</th>
+            <th scope="col">Student Id</th>
+            <th scope="col">Course</th>
+            <th scope="col">Total Fees</th>
+            <th scope="col">Fees paid</th>
+            <th scope="col">Pending Ammount</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of listData">
+                <td>{{row.id}}</td>
+                <td>{{row.studentname}}</td>
+                <td>{{row.studentid}}</td>
+                <td>{{row.course}}</td>
+                <td>{{row.totalfees}}</td>
+                <td>{{row.feespaid}}</td>
+                <td>{{row.pendingfees}}</td>
+            <td><button (click)="onEdit(row)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i></button>&nbsp;
+            <button (click)="deletelist(row)" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
