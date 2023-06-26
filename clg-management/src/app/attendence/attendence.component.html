@@ -1,1 +1,95 @@
-<p>attendence works!</p>
+<!-- Button trigger modal -->
+<div class="v">
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    class="btn btn-dark mb-2 ps-2 ms-4 mt-2"
+  >
+    Attendence
+  </button>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Attendence</h5>
+          <button
+            type="button"
+            class="close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="babyvaccineform">
+            <div>
+              <label for="studentname">Student Name</label>
+              <select
+                class="form-select"
+                id="studentname"
+                class="form-control"
+                name="StudentName"
+                formControlName="StudentName"
+              >
+                <option *ngFor="let row of BabyData">
+                  {{ row.StudentName }}
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <p>whats your status?</p>
+              <input type="radio" id="Present" name="Present" value="Present" formControlName="Status"/>
+              <label for="Present">Present</label><br />
+              <input type="radio" id="Absent" name="Absent" value="Absent"  formControlName="Status"/>
+              <label for="Absent">Absent</label>
+              <br/>
+            </div>
+          </form>
+        </div>
+        <button
+          type="button"
+          (click)="addbv(this.babyvaccineform.value)"
+          type="button"
+          class="btn btn-dark mt-2"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" mt-3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Student Name</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of babyvaccineData">
+          <td>{{ row.id }}</td>
+
+          <td>{{ row.StudentName }}</td>
+          <td>{{ row.Status }}</td>
+
+          <!-- <td>{{row.comment}}</td>   -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

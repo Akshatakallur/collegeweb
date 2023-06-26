@@ -1,1 +1,105 @@
-<p>admission works!</p>
+<div class="y">
+    <main>
+        <div class="d-flex">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-dark mb-2 ps-2 ms-4 mt-2 ">
+                Add Student 
+            </button>
+        </div>
+    </main> 
+       
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="exampleModalLabel">Student information</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <form [formGroup]="bformValue">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="studentname" class="form-control" name="studentname" formControlName="StudentName" placeholder="Enter student Name">
+                    <!-- <span style="color: red;" *ngIf="babyname && babyname.invalid && babyname.touched">This field is not
+                        valid</span>  -->
+                    <div>
+                    <label for="date">DOB</label>
+                    <input type="date" id="date" class="form-control" name="dob" formControlName="dob"  placeholder="Date..">
+                   </div>
+                   <div class="form-group">
+                    <label for="pastschool">Past School</label>
+                    <input type="pastschool" class="form-control"  id="exampleFormControlInput1" formControlName="PastSchool"  placeholder="Enter past school name ">
+                </div>
+                <div class="form-group">
+                    <label for="SslcMarks">Sslc Marks</label>
+                    <input type="SslcMarks" class="form-control"  id="exampleFormControlInput1" formControlName="SslcMarks"  placeholder="Enter sslc marks.. ">
+                </div>
+                <div class="form-group">
+                    <label for="CourseTaken">Course Taken</label>
+                    <input type="CourseTaken" class="form-control"  id="exampleFormControlInput1" formControlName="CourseTaken"  placeholder="Enter course ">
+                </div>
+        
+                    <div class="form-group">
+                        <label for="mothername">Mother Name</label>
+                        <input type="mothername" class="form-control"  id="exampleFormControlInput1" formControlName="mothername"  placeholder="Enter Mother Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="fathername">Father Name</label>
+                        <input type="fathername" class="form-control"  id="exampleFormControlInput1" formControlName="fathername"  placeholder="Enter Father Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact</label>
+                        <input type="contact" id="contact" class="form-control" name="contact" formControlName="contact"  placeholder="Enter contact no.">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea type="address" class="form-control"  id="exampleFormControlInput1" formControlName="address"  placeholder="Enter Address"></textarea>
+                    </div>
+                    </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-x-circle"></i>  cancel</button>
+                        <button type="button" (click)="postbabyDetails()" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Add</button>
+                        <button type="button" (click)="updatebabyDetails()" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Student name</th>
+                        <th scope="col">DOB</th>
+                        <th scope="col">Past School</th>
+                        <th scope="col">Sslc Marks</th>
+                        <th scope="col">Course Taken</th>
+                        <th scope="col">Mother Name</th>
+                        <th scope="col">Fother Name</th>
+                        <th scope="col">Contact No.</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of BabyData">
+                            <td>{{row.id}}</td>
+                            <td>{{row.StudentName}}</td>
+                            <td>{{row.dob}}</td>
+                            <td>{{row.PastSchool}}</td>
+                            <td>{{row.SslcMarks}}</td>
+                            <td>{{row.CourseTaken}}</td>
+                            <td>{{row.mothername}}</td>
+                            <td>{{row.fathername}}</td>
+                            <td>{{row.contact}}</td>
+                            <td>{{row.address}}</td>
+                        <td><button (click)="onEdit(row)" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pen"></i></button>&nbsp;
+                        <button (click)="deletebaby(row)" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>

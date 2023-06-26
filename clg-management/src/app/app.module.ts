@@ -10,10 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { FeesComponent } from './fees/fees.component';
 import { CourseComponent } from './course/course.component';
 import { FacultyDetailsComponent } from './faculty-details/faculty-details.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { TimeTableComponent } from './time-table/time-table.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AttendenceComponent } from './attendence/attendence.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { AttendenceComponent } from './attendence/attendence.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

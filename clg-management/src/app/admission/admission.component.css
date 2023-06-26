@@ -1,0 +1,28 @@
+.modal-body{
+    background-color : rgba(97, 101, 130, 0.6);
+
+}
+.y {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+     background-image: url(https://pennwatch.org/wp-content/uploads/2020/10/college-students-studying-together-in-a-library_Ht90h5Ari-scaled.jpg);
+    background-size: 100% 100%;
+    background-position: top center;
+    
+}
+
+/* .x {
+    margin-top: 10%;
+    text-align: center;
+} */
+
+
+.btn {
+    float: right;
+}
+.table {
+    width: 95%;
+    margin-left: 2%;
+    background-color:wheat;
+}

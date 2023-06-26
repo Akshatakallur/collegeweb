@@ -1,0 +1,17 @@
+.v{
+    background-image: url(https://www.leonhighlife.com/wp-content/uploads/2019/05/AttendanceMattersWordmark_English_-1.png);
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-size: 100% 100%;
+    background-position: top center;
+
+
+}
+thead{
+    background-color: black;
+    
+}
+th{
+    color: white;
+}
