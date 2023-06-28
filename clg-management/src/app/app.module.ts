@@ -15,6 +15,7 @@ import { TimeTableComponent } from './time-table/time-table.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AttendenceComponent } from './attendence/attendence.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdatefacultyComponent } from './updatefaculty/updatefaculty.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TimeTableComponent,
     FeedbackComponent,
     AttendenceComponent,
+    UpdatefacultyComponent,
 
   ],
   imports: [

@@ -1,0 +1,12 @@
+h5{
+    text-align: center;
+}
+.card{
+    top: -10%;
+    left: 50%;
+    width: 435px;
+    padding: 31px 40px;
+    transform: translate(-50% -50%);
+}
+.card{
+    background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;font-family: cursive;}

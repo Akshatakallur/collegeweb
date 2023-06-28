@@ -1,0 +1,45 @@
+h2{
+    color: aliceblue;
+    font-family: cursive;
+}
+.navbar{
+    background-color: dimgray;
+}
+body{
+    margin-top:20px;
+    font-family: cursive;
+}
+.card-body{
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    font-family: cursive; 
+}
+.card-body h3{
+    font-family: cursive;
+    color: rgb(0, 7, 13);
+    margin-bottom: 0.5em;
+    
+}
+.d-flex{
+    margin-right: 40px;
+}
+
+.pop{
+    background-color: blanchedalmond;
+    width: 500px;
+    justify-content: 400px;
+    margin-left: 360px;
+    
+}
+  
+.back{
+    background-image:url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.freeiconspng.com%2Fthumbs%2Fteacher-png%2Fdownload-female-teacher-on-blackboard-in-classroom-9.png&tbnid=aKfupxr4MdesLM&vet=10COUBEDMowQFqFwoTCODK6unA2f8CFQAAAAAdAAAAABAD..i&imgrefurl=https%3A%2F%2Fwww.freeiconspng.com%2Fimages%2Fteacher-png&docid=qxUKAi_c7T1i9M&w=320&h=235&q=faculty%20background&ved=0COUBEDMowQFqFwoTCODK6unA2f8CFQAAAAAdAAAAABAD");
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: 100% 100%;
+    background-size: cover;
+}
+.pop{background-image:url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.freeiconspng.com%2Fthumbs%2Fteacher-png%2Fdownload-female-teacher-on-blackboard-in-classroom-9.png&tbnid=aKfupxr4MdesLM&vet=10COUBEDMowQFqFwoTCODK6unA2f8CFQAAAAAdAAAAABAD..i&imgrefurl=https%3A%2F%2Fwww.freeiconspng.com%2Fimages%2Fteacher-png&docid=qxUKAi_c7T1i9M&w=320&h=235&q=faculty%20background&ved=0COUBEDMowQFqFwoTCODK6unA2f8CFQAAAAAdAAAAABAD"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;
+font-family: cursive;}
